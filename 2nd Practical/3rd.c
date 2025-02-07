@@ -13,21 +13,13 @@ int main(){
     return 0;
 }
 
-// Error in this code !
 
-// int gcd(int a, int b){
-//     int rem;
-//     rem = a%b;
-//     if(rem==0){
-//         return b;
-//     } else {
-//         return(GCD(b,rem));
-//     }
-// }
-
-int gcd(int a, int b) {
-    if (b == 0) { 
-        return a; 
-    } 
-    return gcd(b, a % b);
+int gcd(int a, int b){
+    int rem;
+    rem = a%b;
+    if(rem==0){
+        return b;
+    } else {
+        return(gcd(b,rem));
+    }
 }
