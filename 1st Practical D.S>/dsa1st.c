@@ -14,6 +14,7 @@ void printRowMajor(int arr[ROWS][COLS]){
 printf("\n");
         }
 }
+
 void printColsMajor(int arr[ROWS][COLS]){
     printf("Column-MAjor Order..\n");
         for(int j=0;j<COLS;j++){
