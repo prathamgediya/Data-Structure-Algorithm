@@ -6,10 +6,10 @@ int sequentialSearch(int arr[], int size, int target) {
     for (int i = 0; i < size; i++) {
         // Check if the current element matches the target
         if (arr[i] == target) {
-            return i; // Return the index of the target
+            return i; 
         }
     }
-    return -1; // Element not found
+    return -1;
 }
 
 int main() {
