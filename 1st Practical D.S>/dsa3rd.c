@@ -1,52 +1,39 @@
 // Write program to search an element using binary search method.
 
 #include <stdio.h>
+    int main(){
+        int low, high,mid,n,i,num,a[100];
+        printf("Enter the size of the list");
+        scanf("%d", &n);
 
-int binarySearch(int arr[], int size, int target) {
-    int low = 0, high = size - 1;
+        printf("Enter %d Integer values in ascending order\n", n);;
 
-    while (low <= high) {
-        int mid = (low + high) / 2;
-
-        // Check if the target is at mid
-        if (arr[mid] == target) {
-            return mid; // Return the index of the target
+        for(i=0;i<n;i++){
+            scanf("%d", &a[i]);
+            printf("Enter value to be search:");
+            scanf("%d", &num);
         }
-        // If target is smaller, search the left half
-        else if (arr[mid] > target) {
-            high = mid - 1;
+
+        low = 0;
+        high = n - 1;
+
+        while(low<=high){
+            mid=(low+high)/2;
+            if(num<a[mid]){
+                high = mid -1;
+            } else {
+                if(num>a[mid]){
+                    low = mid + 1;
+                } else if(num == a[mid]){
+                    printf("\n Search is Done...\n");
+                    printf("\n Search value : %d at Location: %d", num, mid +1);
+                    break;
+                }
+            }
         }
-        // If target is larger, search the right half
-        else {
-            low = mid + 1;
+
+        if(low>high){
+            printf("Element not found in the list");
         }
+        return 0;
     }
-
-    return -1; // Element not found
-}
-
-int main() {
-    int n, target;
-
-    printf("Enter the number of elements in the array: ");
-    scanf("%d", &n);
-
-    int arr[n];
-    printf("Enter %d sorted elements: ", n);
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-    }
-
-    printf("Enter the element to search: ");
-    scanf("%d", &target);
-
-    int result = binarySearch(arr, n, target);
-
-    if (result != -1) {
-        printf("Element found at index %d (0-based indexing).\n", result);
-    } else {
-        printf("Element not found in the array.\n");
-    }
-
-    return 0;
-}
