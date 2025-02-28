@@ -47,7 +47,7 @@
 
 void beginsert(){
   ptr = (struct node*) malloc(sizeof(struct node));
-    if(ptyr == NULL){
+    if(ptr == NULL){
       printf("\n Overflow");
     } else {
         printf("\n Enter the first node:");
