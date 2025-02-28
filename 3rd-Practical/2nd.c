@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-  struxt node{
+  struct node{
     int info;
     struct node *next;
   }
