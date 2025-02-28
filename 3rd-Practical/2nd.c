@@ -38,7 +38,7 @@
           exit(0);
           break;
 
-        default;
+        default:
           printf("Please enter valid choice...");
       }
     }
@@ -46,7 +46,7 @@
   }
 
 void beginsert(){
-  ptr = (struct nodde*) malloc(sizeof(struct node));
+  ptr = (struct node*) malloc(sizeof(struct node));
     if(ptyr == NULL){
       printf("\n Overflow");
     } else {
