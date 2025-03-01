@@ -1,4 +1,3 @@
-// Pratham Gediya 
 // implement array row major order and column major order.
 
 #include<stdio.h>
