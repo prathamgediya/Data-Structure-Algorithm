@@ -1,7 +1,4 @@
-// Today I don't have time to code !
-// 25/02 again i don't have much more time today.
 // Implement insert, delet algorithms of queue using array
-// This correct code !!!
 
 #include <stdio.h>
 #include <stdlib.h>
