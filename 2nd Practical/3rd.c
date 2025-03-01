@@ -1,4 +1,3 @@
-// Done ✅ 
 // Write a C Program to implement Greatest common divisor (GCD) using recursive function
 
 #include<stdio.h>
