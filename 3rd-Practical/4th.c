@@ -10,8 +10,8 @@ struct node{
   struct node* next;
 };
 
-void insert at beginning (struct node** head, int data);
-void insert at end (struct node** head, int data);
+void insertbeginning (struct node** head, int data);
+void insertend (struct node** head, int data);
 void display (struct node* head);
 
 int main(){
@@ -20,13 +20,13 @@ int main(){
   while(1){
     printf("\n1. Insert at beginning \n2. Insert aT end \n3. Display \n4. Exit \n");
     printf("Enter your choice");
-    sacnf("%d", &choice);
+    scanf("%d", &choice);
     switch(choice){
       
       case 1:
         printf("Enter data to insert at the beginning:");
         scanf("%d", &data);
-        insert at beginning(head, data);
+        insertbeginning(&head, data);
       break;
 
       case 2:
@@ -49,19 +49,19 @@ int main(){
   return 0;
 }
 
-void insert at beginning(struct node** head, int data){
-  struct node* newnode= (struct node*) malloc (size of (struct node));
+void insertbeginning(struct node** head, int data){
+  struct node* newnode= (struct node*) malloc (sizeof (struct node));
     newnode->data = data;
     newnode->prev = NULL;
     newnode->next = *head;
       if(*head != NULL){
-          (*head)-> prev = newnode';
+          (*head)-> prev = newnode;
       } *head = newnode;
           printf("node inserted at the beginning,\n");
 }
 
-void insert at end(struct node** head, int data){
-  struct node* newnode = (struct node*) malloc (size of(struct node));
+void insertend(struct node** head, int data){
+  struct node* newnode = (struct node*) malloc (sizeof(struct node));
     struct node* temp = *head;
     newnode->data = data;
     newnode->next = NULL;
@@ -79,4 +79,14 @@ void insert at end(struct node** head, int data){
     printf("node inserted at the end.\n");
 }
 
-void display 
+void display (struct node* head){
+  if(head == NULL){
+    printf("List is empty..\n");
+    return;
+  }
+    struct node* temp = head;
+        while(temp != NULL){
+          printf("%d", temp->data);
+          temp = temp->next;
+          }
+}
